@@ -3,22 +3,16 @@
 #include<stdlib.h>
 
 int main(){
-    char a[10]="a11b12c13";
+    char a[10]="a10b11c12";
     int n=strlen(a);
-    printf("%d",n);
-    char c;
     char s[100];
     int flag=0;
     int value=0;
-    char b=a[0];
     char temp;
     for(int i=0;i<n;i++)
     {        
-        if(a[i]>='a' && a[i]<='z')
+        if(a[i] <'a' || a[i]>'z')
         {
-            c=a[i];
-        } else{
-            temp=c;
             s[flag++]=a[i];  
         }
         if(a[i]>='a' && a[i]<='z')
@@ -33,6 +27,7 @@ int main(){
              temp=a[i];
         }           
     }
+    value=atoi(s);
     for(int i=0;i<value;i++)
     {
         printf("%c",temp);
